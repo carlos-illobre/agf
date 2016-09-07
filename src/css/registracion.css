@@ -1,0 +1,106 @@
+html {
+	height: 100vh;
+}
+
+.registracion {
+	min-height: 100vh;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#009688+0,004d40+80,004d40+100 */
+	background: -webkit-radial-gradient(center, ellipse cover,  #009688 0%,#004d40 80%,#004d40 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  #009688 0%,#004d40 80%,#004d40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.registracion-titulo {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 35px;
+	font-weight: 300;
+}
+
+.registracion-subtitulo {
+	font-weight: 300;
+	font-size: 18px;
+}
+
+@media screen and (min-height: 350px) {
+	.registracion-footer {
+		bottom: 0px;
+		position: absolute;
+		width: 100%;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	.registracion-supfooter {
+		bottom: 50px;
+		position: absolute;
+		width: 100%;
+	}
+}
+
+@media screen and (max-height: 350px) {
+	.registracion-footer,
+	.registracion-supfooter {
+		display: none;
+	}
+}
+
+.registracion-form-content {
+	padding: 0 10%;
+}
+
+/* label color */
+.registracion-form-content .input-field label {
+	color: #9e9e9e;
+}
+/* label focus color */
+.registracion-form-content .input-field input + label.active {
+	color: white;
+	top: 0;
+}
+/* label focus color */
+.registracion-form-content .input-field input:focus + label {
+	color: white;
+}
+
+.registracion-form-content input:focus:not([readonly]) + label {
+	color: white !important;
+}
+
+.registracion-form-content input.valid.nolabel + label::after,
+.registracion-form-content input.valid.nolabel:focus + label::after {
+	color: transparent;
+}
+
+.registracion-form-content .input-field input.nolabel + label.active {
+	color: transparent;
+	top: 0;
+}
+/* label focus color */
+.registracion-form-content .input-field input.nolabel:focus + label {
+	color: transparent;
+}
+
+.registracion-form-content input.nolabel:focus:not([readonly]) + label {
+	color: transparent !important;
+}
+
+.registracion-form-content input.nolabel.valid + label::after,
+.registracion-form-content input.nolabel.valid:focus + label::after {
+	color: transparent !important;
+}
+
+.registracion-form-content input.invalid[type=password] + label::after,
+.registracion-form-content  input.invalid[type=password]:focus + label::after ,
+.registracion-form-content input.invalid[type=email] + label::after,
+.registracion-form-content input.invalid[type=email]:focus + label::after {
+	top: 75px;
+	color: #e57373;
+	width: 170px;
+	font-size: 12px;
+	font-weight: bold;
+	/*text-shadow: 1px 1px #ffcdd2, -1px -1px #ffcdd2;*/
+}
+/* icon prefix focus color */
+.registracion-form-content .input-field .prefix.active {
+	color: #000;
+}

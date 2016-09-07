@@ -1,0 +1,21 @@
+<main class="teal registracion"
+	  ng-controller="InicioController as c"
+	  ng-swipe-left="c.next()"
+	  ng-swipe-right="c.prev()">
+	<h2 class="center-align white-text registracion-titulo">AgroFinger</h2>
+	<h6 class="center-align white-text registracion-subtitulo">Cuidar el cultivo es mas f&aacute;cil</h6>
+	<div class="presentacion vertical-center-wrapper" ng-repeat="contenido in c.content">
+		<h4 id="move" digital-swipe
+			class="white-text center-align vertical-center"
+			ng-if="c.isIndex($index)"
+			ng-class="{'animate-right-to-left':c.isRightToLeftAnimation(),'animate-left-to-right':!c.isRightToLeftAnimation()}"
+			>{{contenido}}</h4>
+	</div>
+	<div dots-nav="{{c.content.length}}"
+		 active="c.getIndex()"
+		 active-class="teal lighten-5"
+		 nonactive-class="teal lighten-2"
+		 dot-style="border-color:#00796b;"
+		 class="row center presentacion-dots"
+	/>
+</main>

@@ -1,0 +1,13 @@
+.dropdown-list > li {
+	min-height: inherit;
+}
+
+.dropdown-list > li > a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.dropdown-list > li > a > .material-icons, .dropdown-list > li > a > span {
+	display: inline-block;
+	vertical-align: middle;
+}

@@ -1,0 +1,23 @@
+.autocomplete {
+	font-weight: bold;
+}
+
+.border-radius-search > .material-icons.prefix {
+    left: 10px;
+    top: 10px;
+    width: inherit;
+}
+
+.border-radius-search .angucomplete-holder > input[type="search"],
+.angucomplete-holder > input[type="search"]:hover {
+    border: 1px solid #d1d1d1;
+    border-radius: 25px;
+    padding-left: 40px;
+    width: calc(100% - 40px);
+}
+
+.angucomplete-row {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: white;
+}

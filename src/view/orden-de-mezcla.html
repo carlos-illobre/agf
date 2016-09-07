@@ -1,0 +1,70 @@
+<header navbar hide-logo="true" back-arrow="true">
+	<li>
+		<a href="">
+			<i class="material-icons">save</i>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<i class="material-icons">share</i>
+		</a>
+	</li>
+	<li>
+		<a class="dropdown-button" href="" data-activates="menu-orden-de-mezcla">
+			<i class="material-icons">more_vert</i>
+		</a>
+		<ul id="menu-orden-de-mezcla" class="dropdown-content">
+			<li ng-controller="PrintController as printController">
+				<a href="" ng-click="printController.print()">Imprimir</a>
+			</li>
+			<li>
+				<a href="">Exportar</a>
+			</li>
+		</ul>
+	</li>
+</header>
+<main class="printable">
+	<div class="container screen-container">
+		<section class="section">
+			<h6 class="grey-text text-darken-3">Lote A - Campo1</h6>
+		</section>
+		<div class="divider"></div>
+		<section class="section">
+			<h6 class="grey-text text-darken-3">
+				<span>Orden de Mezcla</span>
+				<span class="header-stars right">
+					<i class="material-icons amber-text text-accent-3">star</i>
+					<i class="material-icons amber-text text-accent-3">star</i>
+					<i class="material-icons amber-text text-accent-3">star</i>
+				</span>
+			</h6>
+			<ol class="screen-ol grey-text text-darken-1">
+				<li>
+					<span>Producto 2</span>
+				</li>
+				<li>
+					<span>Producto 3</span>
+					<a href="#">
+						<i class="material-icons yellow-text text-darken-3">warning</i>
+					</a>
+				</li>
+				<li>
+					<span>Producto 1</span>
+				</li>
+			</ol>
+		</section>
+		<div class="divider"></div>
+		<section class="section">
+			<h6 class="grey-text text-darken-3">Buenas Pr&aacute;cticas</h6>
+			<p class="grey-text text-darken-1">
+				bla bla bla bla bla bla bla bla bla bla bla bla 
+			</p>
+		</section>
+		<div class="fixed-action-btn">
+			<a href="#/detalles-aplicacion" class="btn waves-effect waves-light right teal lighten-1 btn-with-right-icon">
+				<i class="material-icons right">navigate_next</i>
+				<span>Siguiente</span>
+			</a>
+		</div>
+	</div>
+</main>

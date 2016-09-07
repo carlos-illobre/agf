@@ -1,0 +1,49 @@
+<div ng-controller="AplicacionesPendientesParaLoteEspecificoController as c">
+<header class="navbar-fixed">
+	<nav class="teal">
+		<div class="nav-wrapper">
+			<ul>
+				<li>
+					<a href="#/cuenta/campos/default/lotes">
+						<i class="material-icons">arrow_back</i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<main>
+	<div class="container">
+		<section class="section">
+			<h6 class="grey-text text-darken-3">{{c.lote.campo + ' - ' + c.lote.nombre}}</h6>
+		</section>
+		<div class="divider"></div>
+		<section class="section">
+			<h6 class="grey-text text-darken-3">Aplicaciones Pendientes</h6>
+			<table>
+				<thead>
+					<tr class="grey-text text-darken-1">
+						<th style="text-align: center">Fecha</th>
+						<th style="text-align: center">Producto</th>
+						<th style="text-align: center">Dosis</th>
+						<th style="text-align: center">Estado</th>
+					</tr>
+				</thead>
+				<tbody class="grey-text text-darken-1">
+					<tr>
+						<td style="text-align: center">x</td>
+						<td style="text-align: center">x</td>
+						<td style="text-align: center">x</td>
+						<td style="text-align: center">x</td>
+					</tr>
+					<tr>
+						<td style="text-align: center">x</td>
+						<td style="text-align: center">x</td>
+						<td style="text-align: center">x</td>
+						<td style="text-align: center">x</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</div>
+</main>

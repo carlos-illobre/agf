@@ -1,0 +1,22 @@
+.input-icon.input-field > input {
+	margin-left: 0;
+	width: 100%;
+	text-indent: 45px;
+}
+
+.input-icon.input-field > i {
+	line-height: 150%;
+	margin-left: 10px;
+}
+
+.input-icon.input-field label {
+	margin-left: 35px !important;
+}
+
+.btn-with-right-icon {
+	padding-right: 20px;
+}
+
+.btn-with-left-icon {
+	padding-left: 20px;
+}

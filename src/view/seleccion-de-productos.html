@@ -1,0 +1,40 @@
+<header navbar />
+<main class="container screen-container" ng-controller="SeleccionDeProductosController as c">
+	<div style="height:10px;" />
+	<form>
+		<h6>Seleccionar productos - lote</h6>
+		<div class="input-field border-radius-search">
+			<i class="material-icons prefix">search</i>
+			<div angucomplete-alt
+				id="autocomplete"
+				type="search"
+				pause="100"
+				selected-object="c.seleccionarProducto"
+				local-data="c.productos"
+				title-field="nombre"
+				search-fields="nombre"
+				minlength="2"
+				match-class="autocomplete"
+				clear-selected="true"
+				text-no-results="No se encontraron coincidencias"
+			></div>
+		</div>
+		<ul class="collection collection-form">
+			<li class="collection-item" ng-repeat="producto in c.productosSeleccionados track by $index">
+				<div>
+					<span>{{producto.nombre}}</span>
+					<a href="" class="secondary-content" ng-click="c.productosSeleccionados.splice($index, 1)">
+						<i class="material-icons prefix">cancel</i>
+					</a>
+				</div>
+			</li>
+		</ul>
+		<div style="height:50px" />
+		<div class="fixed-action-btn" style="z-index:-1">
+			<button type="submit" class="waves-effect waves-light btn btn-with-right-icon" ng-click="c.siguiente()">
+				<i class="material-icons right">navigate_next</i>
+				<span>Siguiente</span>
+			</button>
+		</div>
+	</form>
+</main>

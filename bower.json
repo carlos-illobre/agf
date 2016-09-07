@@ -1,0 +1,27 @@
+{
+  "name": "agrofinger",
+  "description": "Agro utility",
+  "main": "gulpfile.js",
+  "authors": [
+    "Carlos Illobre"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "agro"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "www.agrofiger.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-swipe": "~0.1.0"
+  }
+}

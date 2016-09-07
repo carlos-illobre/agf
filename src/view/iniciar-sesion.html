@@ -1,0 +1,32 @@
+<main class="teal registracion" ng-controller="IniciarSesionController as c">
+	<h2 class="center-align white-text registracion-titulo">AgroFinger</h2>
+	<form class="vertical-center-wrapper" novalidate autocomplete="off">
+		<div class="registracion-form-content vertical-center">
+			<div class="row">
+				<div class="input-field">
+					<input id="iniciar-sesion-email"
+						   type="email"
+						   class="white border-default validate nolabel"
+						   ng-model="c.cuenta.email"
+					/>
+					<label for="iniciar-sesion-email" data-error="Correo electr&oacute;nico inv&aacute;lido">Correo electr&oacute;nico</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field">
+					<input id="iniciar-sesion-password"
+						   type="password"
+						   class="white border-default validate nolabel"
+						   ng-model="c.cuenta.password"
+					/>
+					<label for="iniciar-sesion-password" data-error="">Contrase&ntilde;a</label>
+				</div>
+			</div>
+			<div class="row center">
+				<button type="submit" style="width:100%" class="waves-effect waves-light btn" ng-click="c.logon()">
+					<span>Iniciar Sesi&oacute;n</span>
+				</button>
+			</div>
+		</div>
+	</form>
+</main>

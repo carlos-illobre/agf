@@ -1,0 +1,61 @@
+.screen-container h6,
+.header {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.screen-container {
+	width: 92%;
+}
+
+.row-without-margin .row {
+	margin-bottom: 0;
+}
+
+.screen-container .section {
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+.screen-container .fixed-action-btn {
+	bottom:15px;
+	right:15px;
+}
+
+.screen-container input[type="number"] {
+	text-align: right;
+}
+
+.header-stars > .material-icons {
+	line-height: inherit;
+}
+
+.screen-ol {
+	margin: 0;
+	padding-left: 26px;
+}
+
+.screen-ol > li {
+	line-height: 30px;
+}
+
+.screen-ol > li .material-icons {
+	vertical-align: text-bottom;
+}
+
+.table-body > tr > td,
+.table-body > tr > td > select,
+.table-body > tr > td > input {
+	margin: 0px 0px;
+	height: inherit;
+	padding: 3px 5px;
+}
+
+.table-body > tr > td > .input-field {
+	margin-top: 5px;
+}
+
+.select-cell {
+	margin-left: 5px;
+	text-align: right;
+}

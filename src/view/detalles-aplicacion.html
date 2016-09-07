@@ -1,0 +1,149 @@
+<header navbar hide-logo="true" back-arrow="true">
+	<li>
+		<a href="">
+			<i class="material-icons">save</i>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<i class="material-icons">share</i>
+		</a>
+	</li>
+	<li>
+		<a class="dropdown-button" href="" data-activates="menu-detalles-aplicacion">
+			<i class="material-icons">more_vert</i>
+		</a>
+		<ul id="menu-detalles-aplicacion" class="dropdown-content">
+			<li ng-controller="PrintController as printController">
+				<a href="" ng-click="printController.print()">Imprimir</a>
+			</li>
+			<li>
+				<a href="">Exportar</a>
+			</li>
+		</ul>
+	</li>
+</header>
+<main class="container screen-container" ng-controller="DetallesAplicacionController as c">
+	<form>
+		<section class="section">
+			<h6 class="grey-text text-darken-3">Lote A - Campo1</h6>
+			<table>
+				<thead>
+					<tr class="grey-text text-darken-1">
+						<th style="width:60%">Producto</th>
+						<th style="width:15%">Dosis</th>
+						<th style="width:25%"></th>
+					</tr>
+				</thead>
+				<tbody class="table-body grey-text text-darken-1">
+					<tr>
+						<td>Producto 2</td>
+						<td>
+							<input class="border-default" type="number" max="9999"/>
+						</td>
+						<td>
+							<select class="select-cell browser-default">
+								<option>L/ha</option>
+								<option>ml/ha</option>
+								<option>cm&sup3;/ha</option>
+								<option>g/ha</option>
+								<option>kg/ha</option>
+								<option>mg/ha</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Producto 3</td>
+						<td>
+							<input class="border-default" type="number" max="9999"/>
+						</td>
+						<td>
+							<select class="select-cell browser-default">
+								<option>L/ha</option>
+								<option>ml/ha</option>
+								<option>cm&sup3;/ha</option>
+								<option>g/ha</option>
+								<option>kg/ha</option>
+								<option>mg/ha</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Producto 1</td>
+						<td>
+							<input class="border-default" type="number" max="9999"/>
+						</td>
+						<td>
+							<select class="select-cell browser-default">
+								<option>L/ha</option>
+								<option>ml/ha</option>
+								<option>cm&sup3;/ha</option>
+								<option>g/ha</option>
+								<option>kg/ha</option>
+								<option>mg/ha</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<tr class="grey-text text-darken-1">
+						<th style="width:50%">Fecha</th>
+						<th style="width:50%"></th>
+					</tr>
+				</thead>
+				<tbody class="table-body grey-text text-darken-1">
+					<tr>
+						<td>
+							<div class="input-field input-icon">
+								<i class="material-icons prefix">date_range</i>
+								<input class="datepicker" type="date" placeholder="Desde" />
+							</div>
+						</td>
+						<td>
+							<div class="input-field input-icon">
+								<i class="material-icons prefix">date_range</i>
+								<input class="datepicker" type="date" placeholder="Hasta" />
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<div class="divider"></div>
+		<section class="section">
+			<h6 class="grey-text text-darken-3">Malezas, plagas y enfermedades</h6>
+			<ul class="collection collection-form">
+				<li class="collection-item" ng-repeat="plaga in c.plagasSeleccionadas track by $index">
+					<div>
+						<span>{{$index + 1 + '. ' + plaga.nombre}}</span>
+						<a href="" class="secondary-content" ng-click="c.plagasSeleccionadas.splice($index, 1)">
+							<i class="material-icons prefix">cancel</i>
+						</a>
+					</div>
+				</li>
+			</ul>
+			<div class="input-field border-radius-search">
+				<i class="material-icons prefix">search</i>
+				<div angucomplete-alt
+					id="autocomplete"
+					type="search"
+					pause="100"
+					selected-object="c.seleccionarPlagas"
+					local-data="c.plagas"
+					title-field="nombre"
+					search-fields="nombre"
+					minlength="1"
+					match-class="autocomplete"
+					clear-selected="true"
+					text-no-results="No se encontraron coincidencias"
+				></div>
+			</div>
+			<button type="submit" class="waves-effect waves-light btn btn-with-right-icon right" ng-click="c.programar()">
+				<span>Programar</span>
+			</button>
+		</section>
+	</form>
+</main>
+

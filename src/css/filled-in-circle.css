@@ -1,0 +1,3 @@
+input.filled-in-circle[type=checkbox] + label::after {
+    border-radius: 10px !important;
+}

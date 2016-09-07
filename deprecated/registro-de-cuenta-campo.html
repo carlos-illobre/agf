@@ -1,0 +1,50 @@
+<main class="row-without-margin teal registracion" ng-controller="RegistroDeCuentaController as c">
+	<h2 class="center-align white-text registracion-titulo">AgroFinger</h2>
+	<div style="height:20px" />
+	<form class="registracion-form" novalidate autocomplete="off">
+		<div class="row">
+			<div class="input-field input-icon">
+				<i class="material-icons prefix">spa</i>
+				<input id="registro-de-cuenta-campo"
+					   type="text"
+					   class="white border-default validate"
+					   ng-model="c.cuenta.campo"
+ 			    />
+				<label for="registro-de-cuenta-campo">Nombre del campo</label>
+			</div>
+		</div>
+		<h6 class="white-text">Invitar al equipo</h6>
+		<div class="row">
+			<div class="input-field input-icon">
+				<i class="material-icons prefix">person_add</i>
+				<input id="registro-de-cuenta-invitar"
+					   type="email"
+					   class="white border-default validate"
+					   ng-model="c.nuevoMiembro"
+					   ng-blur="c.agregarMiembro(c.nuevoMiembro);c.nuevoMiembro=null"
+ 			    />
+				<label for="registro-de-cuenta-invitar" data-error="">Correo electr&oacute;nico</label>
+			</div>
+		</div>
+		<ul class="collection collection-form">
+			<li class="collection-item" ng-repeat="miembro in c.equipo track by $index">
+				<div>
+					<span>{{miembro}}</span>
+					<a href="" class="secondary-content" ng-click="c.removerMiembro($index)">
+						<i class="material-icons prefix">cancel</i>
+					</a>
+				</div>
+			</li>
+		</ul>
+		<p class="white-text">Puede agregar usuarios para que colaboren en este campo</p>	
+		<div class="row center last-button">
+			<button type="submit"
+					class="waves-effect waves-light btn btn-with-right-icon"
+					ng-click="c.registrar()"
+					ng-disabled="!c.cuenta.campo">
+				<i class="material-icons right">send</i>
+				<span>Registrar</span>
+			</button>
+		</div>
+	</form>
+</main>

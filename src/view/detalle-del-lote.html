@@ -1,0 +1,111 @@
+<div ng-controller="DetalleDeLoteController as c">
+	<aside>
+		<div id="cambiar-campana" cambiar-campania="c.lote.campania" />
+	</aside>
+	<header navbar hide-logo="true" back-arrow="true">
+		<li>
+			<a ng-href="{{'#/campos/default/lotes/' + c.lote.id + '/aplicaciones/nueva'}}">
+				<i class="material-icons">schedule</i>
+			</a>
+		</li>
+		<li>
+			<a href="">
+				<i class="material-icons">share</i>
+			</a>
+		</li>
+		<li>
+			<a class="dropdown-button" href="" data-activates="menu-detalle-del-lote">
+				<i class="material-icons">more_vert</i>
+			</a>
+			<ul id="menu-detalle-del-lote" class="dropdown-content">
+				<li>
+					<a class="modal-trigger" href="#cambiar-campana">Cambiar campa&ntilde;a</a>
+				</li>
+				<li>
+					<a href="">Editar</a>
+				</li>
+				<li>
+					<a href="">Eliminar</a>
+				</li>
+				<li>
+					<a href="">Ver historia</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="">Exportar</a>
+				</li>
+			</ul>
+		</li>
+	</header>
+	<main>
+		<div class="container screen-container">
+			<section class="section">
+				<h6 class="grey-text text-darken-3">{{c.lote.nombre + ' - ' + c.lote.campo.nombre}}</h6>
+				<div class="grey-text text-darken-1">{{c.lote.superficie + 'ha - ' + c.lote.cultivo}}</div>
+				<div class="grey-text text-darken-1">1 Realizada - 1 Programada</div>
+			</section>
+			<div class="divider"></div>
+			<section class="section">
+				<h6 class="grey-text text-darken-3">Aplicaciones</h6>
+				<table>
+					<thead>
+						<tr class="grey-text text-darken-1">
+							<th>Fecha</th>
+							<th>Producto</th>
+							<th>Dosis</th>
+							<th>Estado</th>
+						</tr>
+					</thead>
+					<tbody class="grey-text text-darken-1">
+						<tr>
+							<td style="padding:0px 5px">22-10</td>
+							<td style="padding:0px 5px">Glifosato</td>
+							<td style="padding:0px 5px">2 L/ha</td>
+							<td style="padding:0px 5px">
+								<i class="material-icons grey-text text-darken-3">done</i>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:0px 5px">28-11</td>
+							<td style="padding:0px 5px">Glifosato</td>
+							<td style="padding:0px 5px">1 L/ha</td>
+							<td style="padding:0px 5px">
+								<i class="material-icons grey-text text-darken-3">schedule</i>
+								<i class="material-icons yellow-text text-darken-3">warning</i>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<div class="divider"></div>
+			<section class="section">
+				<h6 class="grey-text text-darken-3">Modos de acci&oacute;n</h6>
+				<div class="row grey-text text-darken-1">
+					<div class="col s8">Inhibidores de la EPSPS</div>
+					<div class="col s4 right-align">100%</div>
+				</div>
+			</section>
+			<div class="divider"></div>
+			<section class="section">
+				<h6 class="grey-text text-darken-3">Notas</h6>
+				<div class="grey-text text-darken-1">Sin notas</div>
+<form action="#">
+	<div class="file-field input-field">
+		<div class="btn">
+			<span>Adjuntar</span>
+			<input type="file" accept="image/*" />
+		</div>
+			<div class="file-path-wrapper">
+			<input class="file-path validate" type="text">
+		</div>
+	</div>
+</form>
+			</section>
+			<div class="fixed-action-btn">
+				<a href="" class="btn-floating btn-large waves-effect waves-circle waves-light right teal lighten-1">
+					<i class="material-icons">edit</i>
+				</a>
+			</div>
+		</div>
+	</main>
+</div>

@@ -1,0 +1,31 @@
+<main class="teal registracion" ng-controller="RegistroDeCuentaController as c">
+	<h2 class="center-align white-text registracion-titulo">AgroFinger</h2>
+	<form class="vertical-center-wrapper" novalidate autocomplete="off">
+		<div class="registracion-form-content vertical-center">
+			<div class="row">
+				<div class="input-field">
+					<input id="registro-de-cuenta-email"
+						   type="email"
+						   class="white border-default validate nolabel"
+						   ng-model="c.cuenta.email"
+					/>
+					<label for="registro-de-cuenta-email" data-error="Correo electr&oacute;nico inv&aacute;lido">Correo electr&oacute;nico</label>
+				</div>
+			</div>
+			<div class="row center">
+				<a href="#/cuenta/password"
+				   style="width:100%;"
+				   class="waves-effect waves-light btn"
+				   >Siguiente</a>
+			</div>
+		</div>
+	</form>
+	<p class="center-align registracion-supfooter">
+		<span>Al registrarte, aceptas nuestras</span>
+		<a href="" class="teal-text text-lighten-5">condiciones y politicas de privacidad</a>
+	</p>
+	<div class="teal lighten-5 center-align registracion-footer">
+		<span style="padding-right:5px;" class="grey-text text-darken-3">¿Ya ten&eacute;s cuenta?</span>
+		<a style="padding-left:5px;" class="teal-text" href="#/cuenta">Iniciar Sesi&oacute;n</a>
+	</div>
+</main>

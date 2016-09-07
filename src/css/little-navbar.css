@@ -1,0 +1,13 @@
+.little-navbar.navbar-fixed, .little-navbar > nav, .little-navbar > nav > .nav-wrapper i {
+    height: 48px;
+    line-height: 48px;
+}
+
+.little-navbar > nav .nav-wrapper i, .little-navbar > nav > .nav-wrapper .brand-logo {
+	font-size: 20px;
+}
+
+.little-navbar > nav > .nav-wrapper > ul  > li > a {
+	padding-left: 10px;
+	padding-right: 10px;
+}

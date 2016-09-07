@@ -1,0 +1,22 @@
+input.border-default {
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+	text-indent: 10px;
+}
+
+.input-field.border-default input {
+	border: 1px solid #d1d1d1;
+    border-radius: 5px;
+	text-indent: 10px;
+	height: 30px;
+}
+
+.input-field.border-default label {
+	top: 5px;
+	left: 20px;
+}
+
+.input-field.border-default > div > .material-icons {
+	top: 5px;
+	right: 10px;
+}

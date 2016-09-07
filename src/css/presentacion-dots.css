@@ -1,0 +1,12 @@
+.presentacion-dots {
+	position: fixed;
+	bottom: 30px;
+	width: 100%;
+	margin-bottom: 0;
+}
+
+@media screen and (max-height: 420px) {
+	.presentacion-dots {
+		display: none;
+	}
+}

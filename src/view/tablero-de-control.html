@@ -1,0 +1,25 @@
+<header navbar>
+	<li>
+		<a href="">
+			<i class="material-icons">notifications</i>
+		</a>
+	</li>
+</header>
+<main class="container screen-container" ng-controller="TableroDeControlController as c">
+	<section class="section">
+		<h6>
+			<span>Aplicaciones pendientes</span>
+			<span class="badge teal white-text" style="border-radius: 16px;">{{c.aplicaciones.pendientes}}</span>
+		</h6>
+	</section>
+	<div class="divider" />
+	<section class="section">
+		<h6>Aplicaciones realizadas</h6>
+		<nvd3 options="c.aplicaciones.realizadas.options" data="c.aplicaciones.realizadas.data"></nvd3>
+	</section>
+	<div class="divider" />
+	<section class="section">
+		<h6>M&eacute;todos de acci&oacute;n</h6>
+		<nvd3 options="c.metodosDeAccion.options" data="c.metodosDeAccion.data"></nvd3>
+	</section>
+</main>

@@ -1,0 +1,12 @@
+.vertical-center-wrapper {
+	padding: 0 10px;
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+.vertical-center {
+	display: table-cell;
+	height: 60vh;
+	vertical-align :middle;
+}

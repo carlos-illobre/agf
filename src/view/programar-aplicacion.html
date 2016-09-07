@@ -1,0 +1,34 @@
+<header navbar />
+<main class="container screen-container" ng-controller="ProgramarAplicacionesController as c">
+	<form autocomplete="off">
+		<div style="height:10px" />
+		<h6>Programar Aplicaci&oacute;n</h6>
+		<div class="row" style="margin-bottom:0">
+			<div class="input-field col s6"
+				 select-modal="Campo"
+				 options="c.campos"
+				 selected="c.campoPorDefecto"
+				 key-label="nombre"
+				 rel="Crear nuevo campo"
+				 href="{{'#/campos/nuevo'}}"
+			/>
+		</div>
+		<div class="row">
+			<div class="input-field col s6"
+				 select-modal="Lote"
+				 options="c.lotes"
+				 selected="c.lote"
+				 key-label="nombre"
+				 rel="Crear nuevo lote"
+				 href="{{'#/cuenta/campos/default/lotes/new'}}"
+			/>
+		</div>
+		<div class="row center">
+			<a href="" class="waves-effect waves-light btn">Guardada</a>
+		</div>
+		<div class="row center">
+			<a ng-href="{{'#/campos/default/lotes/nuevo/aplicaciones/nueva/productos'}}"
+			   class="waves-effect waves-light btn">Nueva</a>
+		</div>
+	</form>
+</main>

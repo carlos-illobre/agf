@@ -1,0 +1,64 @@
+<header navbar="" hide-logo="true" back-arrow="true" />
+<main class="container screen-container row-without-margin" ng-controller="CrearCampoController as c">
+	<form autocomplete="off">
+		<div class="row">
+			<div class="col s6 input-field">
+				<input id="crear-campo-nombre" type="text" ng-model="c.campo.nombre" />
+				<label for="crear-campo-nombre">Nombre</label>
+			</div>
+			<div class="input-field col s6"
+				 select-modal="Campa&ntilde;a"
+				 options="c.campanias"
+				 selected="c.campo.campania"
+			/>
+		</div>
+		<div class="row">
+			<div class="col s6 input-field">
+				<input id="crear-campo-zona" type="text" ng-model="c.campo.zona" />
+				<label for="crear-campo-zona">zona</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s6 input-field">
+				<input style="width:calc(100% - 75px)"
+					   ng-model="c.campo.superficie"
+					   type="number"
+			    />
+				<span style="margin-left:5px">hect&aacute;reas</span>
+			</div>
+		</div>
+		<h6>Invitar al equipo</h6>
+		<div class="row">
+			<div class="col s8 input-field">
+				<input id="crear-campo-invitar"
+					   type="email"
+					   class="white validate"
+					   ng-model="c.nuevoMiembro"
+					   ng-blur="c.agregarMiembro(c.nuevoMiembro);c.nuevoMiembro=null"
+ 			    />
+				<label for="crear-campo-invitar" data-error="">Correo electr&oacute;nico</label>
+			</div>
+		</div>
+		<ul class="collection collection-form">
+			<li class="collection-item" ng-repeat="miembro in c.equipo track by $index">
+				<div>
+					<span>{{miembro}}</span>
+					<a href="" class="secondary-content" ng-click="c.removerMiembro($index)">
+						<i class="material-icons prefix">cancel</i>
+					</a>
+				</div>
+			</li>
+		</ul>
+		<p>Puede agregar usuarios para que colaboren en este campo</p>	
+		<div class="row right">
+			<div class="col s12 last-button">
+				<button	class="waves-effect waves-light btn btn-with-left-icon"
+						ng-click="c.guardar()"
+						type="submit">
+					<i class="material-icons left">save</i>
+					<span>Guardar</span>
+				</button>
+			</div>
+		</div>
+	</form>
+</main>

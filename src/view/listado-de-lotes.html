@@ -1,0 +1,91 @@
+<div ng-controller="ListadoDeLotesController as c">
+	<aside>
+		<div id="cambiar-campana" cambiar-campania="c.lote.campania" />
+	</aside>
+	<aside>
+		<div id="cambiar-campo" cambiar-campo="c.lote.campo" />
+	</aside>
+	<header navbar hide-logo="c.cantidadSeleccionados" back-arrow="c.cantidadSeleccionados">
+		<li ng-show="c.cantidadSeleccionados">
+			<a href="" ng-click="c.setFavoritos()">
+				<i class="material-icons">{{c.toggleFavoritos ? 'star' : 'star_border'}}</i>
+			</a>
+		</li>
+		<li ng-show="c.cantidadSeleccionados">
+			<a href="">
+				<i class="material-icons">share</i>
+			</a>
+		</li>
+		<li>
+			<a class="dropdown-button" href="" data-activates="menu-listado-de-lotes">
+				<i class="material-icons">more_vert</i>
+			</a>
+			<ul id="menu-listado-de-lotes" class="dropdown-content">
+				<li>
+					<a href="">Ordenar por</a>
+				</li>
+				<li>
+					<a class="modal-trigger" href="#cambiar-campana">Cambiar campa&ntilde;a</a>
+				</li>
+				<li>
+					<a class="modal-trigger" href="#cambiar-campo">Cambiar campo</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a href="">Exportar</a>
+				</li>
+			</ul>
+		</li>
+	</header>
+	<main>
+		<table class="bordered table-list">
+			<tbody>
+				<tr ng-repeat="lote in c.lotes">
+					<td style="width:30px;">
+						<input id="lote-seleccionado-{{$index}}"
+							   type="checkbox"
+							   class="filled-in filled-in-circle vertical-center"
+							   ng-model="lote.seleccionado"
+							   ng-click="c.contarSeleccionados(lote.seleccionado)"
+					    />
+						<label for="lote-seleccionado-{{$index}}"></label>
+					</td>
+					<td style="width:24px;padding-right:0">
+						<i class="material-icons yellow-text text-lighten-4" ng-if="!lote.favorito">star_border</i>
+						<i class="material-icons amber-text text-accent-3" ng-if="lote.favorito">star</i>
+					</td>
+					<td>
+						<a ng-href="{{'#/campos/default/lotes/' + $index}}">
+							<div>
+								<h6 class="header grey-text text-darken-2" style="margin:0">{{lote.nombre}}</h6>
+								<span class="grey-text">{{lote | loteDescripcion}}</span>
+							</div>
+						</a>
+					</td>
+					<td style="width:25px;">
+						<a href="" class="grey-text text-darken-2">
+							<i class="material-icons">create</i>
+						</a>
+					</td>
+					<td style="width:25px;">
+						<a ng-href="{{'#/campos/default/lotes/' + $index + '/aplicaciones/nueva'}}"
+						   class="grey-text text-darken-2">
+							<i class="material-icons">schedule</i>
+						</a>
+					</td>
+					<td style="width:25px;">
+						<a ng-href="{{'#/campos/default/lotes/' + $index + '/aplicaciones/pendientes'}}"
+						   class="grey-text text-darken-2">
+							<i class="material-icons">check</i>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="container fixed-action-btn">
+			<a href="#/cuenta/campos/default/lotes/new" class="btn-floating btn-large waves-effect waves-circle waves-light right teal lighten-1">
+				<i class="large material-icons">add</i>
+			</a>
+		</div>
+	</main>
+</div>

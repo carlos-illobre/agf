@@ -1,0 +1,31 @@
+body {
+	overflow-x: hidden;
+}
+
+.presentacion > .animate-left-to-right.ng-enter,
+.presentacion > .animate-left-to-right.ng-leave ,
+.presentacion > .animate-right-to-left.ng-enter,
+.presentacion > .animate-right-to-left.ng-leave  {
+	transition: 400ms linear all;
+	width: 100%;
+}
+
+.presentacion > .animate-right-to-left.ng-enter {
+	transform: translateX(100%);
+}
+
+.presentacion > .animate-left-to-right.ng-enter {
+	transform: translateX(-100%);
+}
+
+.presentacion > .animate-left-to-right.ng-enter-active ,
+.presentacion > .animate-right-to-left.ng-enter-active {
+	transform: translateX(0px);
+}
+
+.presentacion > .animate-left-to-right.ng-leave,
+.presentacion > .animate-right-to-left.ng-leave,
+.presentacion > .animate-left-to-right.ng-leave-active,
+.presentacion > .animate-right-to-left.ng-leave-active {
+	display: none;
+}
