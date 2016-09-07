@@ -232,8 +232,8 @@ gulp.task('zip', ['apache'], function() {
 gulp.task('hostinger', ['apache'], function() {
 	var conn = ftp.create({
         host:     'agrofinger.esy.es',
-        user:     'u528766895',
-        password: 'sxnC9X802M',
+        user:     'u528786895',
+        password: 'sxnC9H802M',
         parallel: 1,
 		log: gutil.log
     })
@@ -242,5 +242,5 @@ gulp.task('hostinger', ['apache'], function() {
 })
 
 gulp.task('dev', ['html', 'index'])
-gulp.task('default', ['hostinger'])
+gulp.task('default', ['apache'])
 
