@@ -1,7 +1,6 @@
 angular.module('agrofinger', [
 	'ngRoute',
 	'ngAnimate',
-	'swipe',
 	'angucomplete-alt',
 	'nvd3',
 	'materialize-angular-adapter'
